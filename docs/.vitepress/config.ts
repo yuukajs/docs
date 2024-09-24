@@ -31,7 +31,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Docs Released Under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> License.',
-      copyright: `Copyright © ${Date().getFullYear()} Lisk`,
+      copyright: `Copyright © ${(new Date()).getFullYear()} Lisk`,
     },
     editLink: {
       pattern: "https://github.com/lisk809/yuuka-docs/edit/main/docs/:path",
