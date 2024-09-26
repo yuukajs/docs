@@ -19,10 +19,10 @@ hero:
   actions:
     - theme: brand
       text: 即刻起步
-      link: /starter
+      link: /starter/template
     - theme: alt
       text: 开发拓展
-      link: /developer
+      link: /developer/index
     - theme: alt
       text: GitHub
       link: https://github.com/Lisk809/yuuka
@@ -48,13 +48,6 @@ features:
 
   --vp-home-hero-image-background-image: linear-gradient(-45deg, #00FF77 50%, #FFFF77 50%);
   --vp-home-hero-image-filter: blur(44px);
-}
-
-.tagline::first-letter {
-    color: #333;
-    float: left;
-    font-size: 4em;
-    text-align: left;
 }
 
 @media (min-width: 640px) {
