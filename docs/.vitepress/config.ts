@@ -17,13 +17,17 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/index" },
       { text: "Intro", link: "/intro" },
+      { text: "开发者", items: [{text:"导引", link:"/developer/index"},{text:"开发插件", link:"/developer/plugin"}]},
+      {text: "用户", items: [{text:"创建模板项目", link:"/starter/template"}, {text:"自由配置", link:"/starter/custom"}, {text:"插件安装与配置", link:"/starter/plugin"}]},
       { text: "高级", items: [{ text: "流的概念", link: "/advanced/flow" }] },
     ],
-    sidebar: [
+    sidebar:[
           { text: "Home", link: "/index" },
-          { text: "Intro", link: "/intro" },
-	  { text: "高级", items: [{ text: "流的概念", link: "/advanced/flow" }] },
-    ],
+	        { text: "Intro", link: "/intro" },
+		      { text: "开发者", items: [{text:"导引", link:"/developer/index"},{text:"开发插件", link:"/developer/plugin"}]},
+		            {text: "用户", items: [{text:"创建模板项目", link:"/starter/template"}, {text:"自由配置", link:"/starter/custom"}, {text:"插件安装与配置", link:"/starter/plugin"}]},
+			          { text: "高级", items: [{ text: "流的概念", link: "/advanced/flow" }] },
+				      ],
     socialLinks: [
       { icon: "github", link: "https://github.com/lisk809/yuuka" },
       { icon: npm, link: "https://www.npmjs.com/package/yuuka" },

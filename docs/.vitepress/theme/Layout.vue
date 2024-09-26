@@ -55,4 +55,7 @@ p {
   font-family:"rubik";
   font-weight:lighter;
 }
+html.dark p{
+  color:#eee
+}
 </style>

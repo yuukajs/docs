@@ -17,6 +17,7 @@ const props=defineProps<{
 }
 img {
  max-height:150px;
+ margin:0 auto;
 }
 p {
   color:#555;
