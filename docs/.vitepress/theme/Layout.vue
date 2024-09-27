@@ -1,15 +1,7 @@
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme"
 import {ref} from "vue"
-
-let hitokoto=ref("loading...")
-
-fetch("https://v1.hitokoto.cn").then(a=>a.json()).then((data)=>{
-  hitokoto.value=
-`${data.hitokoto}
-\n\t${data.from} - ${data.from_who}
-`
-})
+import NotFound from './NotFound.vue'
 </script>
 <template>
 <DefaultTheme.Layout>
@@ -23,12 +15,12 @@ fetch("https://v1.hitokoto.cn").then(a=>a.json()).then((data)=>{
 <template #sidebar-nav-after><slot name="sidebar-nav-after" /></template>
 <template #page-top><slot name="page-top" /></template>
 <template #page-bottom><slot name="page-bottom" /></template>
-<template #not-found><slot name="not-found" /></template>
+<template #not-found><NotFound /></template>
 <template #home-hero-before><slot name="home-hero-before" /></template>
 <template #home-hero-info-before><slot name="home-hero-info-before" /></template>
 <template #home-hero-info><slot name="home-hero-info" /></template>
 <template #home-hero-info-after>
-<p>{{hitokoto}}</p>
+	<Hitokoto />
 <slot name="home-hero-info-after" /></template>
 <template #home-hero-actions-after><slot name="home-hero-actions-after" /></template>
 <template #home-hero-image><slot name="home-hero-image" /></template>
@@ -48,14 +40,3 @@ fetch("https://v1.hitokoto.cn").then(a=>a.json()).then((data)=>{
 <template #aside-ads-after><slot name="aside-ads-after" /></template>
 </DefaultTheme.Layout>
 </template>
-<style scoped>
-p {
-  color:#333;
-  margin-top:10px;
-  font-family:"rubik";
-  font-weight:lighter;
-}
-html.dark p{
-  color:#eee
-}
-</style>

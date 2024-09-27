@@ -9,12 +9,12 @@ const { site } = useData()
     <p class="code">404</p>
     <div class="divider" />
     <blockquote class="quote">
-      啊这, 踏入了神秘领域, 快回到首页
+      当灵魂离去时，花也会随之凋零🥀
     </blockquote>
 
     <div class="action">
       <a class="link" :href="site.base" aria-label="go to home">
-        返回首页
+	      <RandomFlower />
       </a>
     </div>
   </div>
