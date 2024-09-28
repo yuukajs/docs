@@ -1,5 +1,17 @@
 import { defineConfig } from "vitepress";
+import { SearchPlugin } from "vitepress-plugin-search";
+import Segment from "segment"
 import { qq, bilibili, npm } from "./icons.ts";
+
+const segment = new Segment();
+segment.useDefault();
+
+const options = {
+  encode: function (str:string) {
+    return segment.doSegment(str, {simple: true});
+  },
+  tokenize: "forward",
+};
 
 // https://vitepress.vuejs.org/config/app-configs
 export default defineConfig({
@@ -61,15 +73,7 @@ export default defineConfig({
     theme: "one-dark-pro",
     lineNumbers: true,
   },
-  search: {
-    provider: "local",
-    options: {
-      miniSearch: {
-	options:{},
-	searchOptions:{ fuzzy: 0.2, prefix: true, boost: { title: 4, text: 2, titles: 1 } }
-      }
-    }
-   },
+  vite: { plugins: [SearchPlugin(options)] },
   sitemap: {
     hostname: 'https://yuuka.js.org'
    }
