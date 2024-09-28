@@ -7,10 +7,11 @@ export default defineConfig({
   titleTemplate: ":title - ヒマワリ🌻",
   description: "Cross-platform Chat Robot Framework Yuuka.",
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
-    ["meta", { name: "theme-color", content: "#831800" }],
+    ["link", { rel: "icon", href: "/logo.png" }],
+    ["meta", { name: "theme-color", content: "#006E4A" }],
   ],
   lang: "zh-CN",
+  base: "/docs/",
   lastUpdated: true,
   themeConfig: {
     logo: "/logo.png",
@@ -62,8 +63,14 @@ export default defineConfig({
   },
   search: {
     provider: "local",
+    options: {
+      miniSearch: {
+	options:{},
+	searchOptions:{ fuzzy: 0.2, prefix: true, boost: { title: 4, text: 2, titles: 1 } }
+      }
+    }
    },
   sitemap: {
-    hostname: 'https://yuuka.js.org/'
+    hostname: 'https://yuuka.js.org'
    }
 });

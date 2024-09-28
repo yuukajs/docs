@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {withBase} from 'vitepress'
+
 const props=defineProps<{
   src: string
   text: string
@@ -6,7 +8,7 @@ const props=defineProps<{
 </script>
 <template>
 <div class="image">
-<img :src="props.src" />
+<img :src="withBase(props.src)" />
 <p>{{ props.text }}</p>
 </div>
 </template>
