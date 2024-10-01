@@ -23,7 +23,6 @@ export default defineConfig({
     ["meta", { name: "theme-color", content: "#006E4A" }],
   ],
   lang: "zh-CN",
-  base: "/docs/",
   lastUpdated: true,
   themeConfig: {
     logo: "/logo.png",
@@ -70,7 +69,10 @@ export default defineConfig({
   },
   markdown: {
     math: true,
-    theme: "one-dark-pro",
+    themes:{
+      light: "nord",
+      dark: "one-dark-pro"
+    },
     lineNumbers: true,
   },
   vite: { plugins: [SearchPlugin(options)] },
