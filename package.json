@@ -5,10 +5,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs",
-    "docs:dev": "vitepress dev test",
-    "docs:build": "vitepress build test",
-    "docs:preview": "vitepress preview test"
+    "preview": "vitepress preview docs"
   },
   "devDependencies": {
     "less": "^4.2.0",
@@ -18,7 +15,7 @@
     "vitepress-plugin-search": "^1.0.4-alpha.22",
     "vue": "^3.4.35"
   },
-  "pnpm": {
+  "yarn": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search"
