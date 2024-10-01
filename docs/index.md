@@ -40,25 +40,3 @@ features:
     title: 生态活
     details: 开发者对于生态建设亲力亲为, 尽量支持大部分平台, 对于开发及使用问题, 可在交流讨论平台询问, 即可快速解答
 ---
-
-<style>
-:root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #64DD69 30%, #64DDE8);
-
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, #00FF77 50%, #FFFF77 50%);
-  --vp-home-hero-image-filter: blur(44px);
-}
-
-@media (min-width: 640px) {
-  :root {
-    --vp-home-hero-image-filter: blur(56px);
-  }
-}
-
-@media (min-width: 960px) {
-  :root {
-    --vp-home-hero-image-filter: blur(68px);
-  }
-}
-</style>
