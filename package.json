@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@shikijs/vitepress-twoslash": "^1.21.0",
-    "@yuukajs/yuuka": "^0.0.1-dev20241001",
+    "@yuukajs/yuuka": "^0.0.1-dev20241002",
     "less": "^4.2.0",
     "markdown-it-mathjax3": "^4.3.2",
     "segment": "^0.1.3",
