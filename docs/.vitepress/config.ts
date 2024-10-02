@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { SearchPlugin } from "vitepress-plugin-search";
 import Segment from "segment"
 import { qq, bilibili, npm } from "./icons.ts";
@@ -74,6 +75,9 @@ export default defineConfig({
       dark: "one-dark-pro"
     },
     lineNumbers: true,
+    codeTransformers: [
+      transformerTwoslash() 
+    ]
   },
   vite: { plugins: [SearchPlugin(options)] },
   sitemap: {

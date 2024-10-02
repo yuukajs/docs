@@ -10,8 +10,8 @@ $\forall x为某个颜色的光, f(x)=x$
 
 `Yuuka`借鉴了`流`的概念，我们可以定义一个在某处有定义的函数，使用
 
-```ts
-function define(lambda:e:any=>boolean, body:x=>any): boolean
+```ts twoslash
+declare function define<T>(lambda: (x: T) => boolean, body: (x: T) => any): boolean
 ```
 
 来定义一个函数，在表达式lambda返回值为真时，body执行
@@ -25,9 +25,18 @@ function define(lambda:e:any=>boolean, body:x=>any): boolean
   content:"hello!"
 }
 ```
-```ts
-flow.define(e=>e.type==="message", (e)=>{
-  console.log(e.content)
+```ts twoslash
+import {Flow} from '@yuukajs/yuuka'
+
+const flow = new Flow()
+
+interface Event{
+  type:string;
+  content:string;
+}
+
+flow.dom<Event>(e => e.type==="message", (e)=>{
+  console.log(e.content);
 })
 ```
 
