@@ -33,7 +33,7 @@
   .mark {
     color: inherit;
     background-color: transparent;
-    animation-name: mark-highlight-animation-6364b858;
+    animation-name: mark-highlight-animation;
     animation-duration: 1.5s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
@@ -46,7 +46,26 @@
       transparent 50%
     );
   }
+  @keyframes mark-highlight-animation {
+    0% {
+      color: inherit;
+      background-position: 100% var(--vp-nolebase-mark-bg-shift);
+    }
 
+    to {
+      color: var(--vp-c-text-1);
+      background-position: 0% var(--vp-nolebase-mark-bg-shift);
+    }
+  }
+  .masked {
+    transition: color 0.13s linear;
+    color: #252525;
+    text-shadow: none;
+    background-color: #252525;
+  }
+  .masked:hover {
+    color: #fff;
+  }
   .vp-doc {
     & :not(pre) > code {
       font-weight: bold;
