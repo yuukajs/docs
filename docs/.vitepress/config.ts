@@ -22,6 +22,13 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/logo.png" }],
     ["meta", { name: "theme-color", content: "#006E4A" }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'en' }],
+    ['meta', { property: 'og:title', content: 'Yuuka | Cross-platform chat robot framework.' }],
+    ['meta', { property: 'og:site_name', content: 'Yuuka' }],
+    ['meta', { property: 'og:image', content: 'https://yuuka.js.org/yuuka-og.png' }],
+    ['meta', { property: 'og:url', content: 'https://yuuka.js.org/' }],
+    ['script', {src: "https://unpkg.com/twemoji@latest/dist/twemoji.min.js", crossorigin: "anonymous"}]
   ],
   lang: "zh-CN",
   lastUpdated: true,
@@ -77,7 +84,10 @@ export default defineConfig({
     lineNumbers: true,
     codeTransformers: [
       transformerTwoslash() 
-    ]
+    ],
+    config(md) {
+      md.use(tabsMarkdownPlugin)
+    }
   },
   vite: { plugins: [SearchPlugin(options)] },
   sitemap: {
