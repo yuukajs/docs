@@ -869,10 +869,10 @@
   dependencies:
     vue-demi ">=0.14.10"
 
-"@yuukajs/yuuka@^0.0.1-dev20241001":
-  version "0.0.1-dev20241001"
-  resolved "https://registry.npmmirror.com/@yuukajs/yuuka/-/yuuka-0.0.1-dev20241001.tgz#41377c1bbbb6a93a765764144ac2acbdb87d1600"
-  integrity sha512-8vGtYBJiUwHBKDcierRIiIa8vnMfbjlkMoBQdQi04GFTWccSCvoJ9txFUZF95CV8tlaRHZ+9gwWXeWsGN6xU3w==
+"@yuukajs/yuuka@^0.0.1-dev20241002":
+  version "0.0.1-dev20241002"
+  resolved "https://registry.npmmirror.com/@yuukajs/yuuka/-/yuuka-0.0.1-dev20241002.tgz#bce233386e59479d2225e22335c9bb994a007822"
+  integrity sha512-lIeArnS/XYDbazSs8nrvdBO+3tN7GorbFMvBEEPZ5Maf5dtBqVoyhWxNAcOdHa30TtK7QsOOjjQk5TW+UWZb3g==
 
 algoliasearch@^4.19.1:
   version "4.24.0"
@@ -2117,6 +2117,11 @@ vitepress-plugin-search@^1.0.4-alpha.22:
     "@types/markdown-it" "^12.2.3"
     glob-to-regexp "^0.4.1"
     markdown-it "^13.0.1"
+
+vitepress-plugin-tabs@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npmmirror.com/vitepress-plugin-tabs/-/vitepress-plugin-tabs-0.5.0.tgz#2b193a72ed36b9fcd63e3907d3044fe7b6cf3e4e"
+  integrity sha512-SIhFWwGsUkTByfc2b279ray/E0Jt8vDTsM1LiHxmCOBAEMmvzIBZSuYYT1DpdDTiS3SuJieBheJkYnwCq/yD9A==
 
 vitepress@^1.3.1:
   version "1.3.4"

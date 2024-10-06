@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 import { transformerTwoslash } from '@shikijs/vitepress-twoslash'
 import { SearchPlugin } from "vitepress-plugin-search";
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs'
 import Segment from "segment"
 import { qq, bilibili, npm } from "./icons.ts";
 
